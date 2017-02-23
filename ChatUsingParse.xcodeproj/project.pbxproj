@@ -69,14 +69,22 @@
 		A55EABCB1E5D753000E14F97 /* ChatUsingParse */ = {
 			isa = PBXGroup;
 			children = (
+				A55EABE41E5E696400E14F97 /* View Controllers */,
 				A55EABCC1E5D753000E14F97 /* AppDelegate.swift */,
 				A55EABD01E5D753000E14F97 /* Main.storyboard */,
 				A55EABD31E5D753000E14F97 /* Assets.xcassets */,
 				A55EABD51E5D753000E14F97 /* LaunchScreen.storyboard */,
 				A55EABD81E5D753000E14F97 /* Info.plist */,
-				A55EABDE1E5D77CD00E14F97 /* LoginViewController.swift */,
 			);
 			path = ChatUsingParse;
+			sourceTree = "<group>";
+		};
+		A55EABE41E5E696400E14F97 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A55EABDE1E5D77CD00E14F97 /* LoginViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		ECE0F52B4C5760566DEA0B0A /* Pods */ = {

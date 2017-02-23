@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
 
@@ -18,8 +19,50 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func signUpButtonPushed(_ sender: Any) {
+        
+        signUp();
+        
+    }
+    
+    func signUp() {
+        let user = PFUser()
+        user.username = emailTextField.text
+        user.password = passwordTextField.text
+
+        // other fields can be set just like with PFObject
+   
+        user.signUpInBackground { (success: Bool, error: Error?) in
+            
+            if success {
+                print("This worked!")
+            } else {
+                print("This did not work")
+            }
+            
+        }
+        
+    }
+    
+    @IBAction func loginButtonPushed(_ sender: Any) {
+        
+        login();
+        
+    }
+    
+    func login() {
+        
+        PFUser.logInWithUsername(inBackground: emailTextField.text!, password: passwordTextField.text!) { (user: PFUser?, error: Error?) in
+            if user != nil {
+                print("User logged in")
+            }
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
