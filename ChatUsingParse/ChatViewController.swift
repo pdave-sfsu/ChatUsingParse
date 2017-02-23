@@ -22,6 +22,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         tableView.delegate = self
         tableView.dataSource = self
+        
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
         
@@ -33,7 +34,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func onTimer () {
         let query = PFQuery(className:"Message")
-        query.whereKeyExists("text")
+        query.order(byDescending: "createdAt")
+        query.includeKey("user")
         query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
             if error == nil {
                 // The find succeeded.
@@ -42,7 +44,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if let objects = objects {
                     self.objects = objects
                     for object in objects {
-                        print(object.objectId!)
+//                        print(object["text"])
                     }
                 }
             } else {
@@ -60,6 +62,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let message = PFObject(className:"Message")
         message["text"] = messageTextField.text!
+        message["user"] = PFUser.current()
+        
 
         message.saveInBackground { (success: Bool, error: Error?) in
             if (success) {
@@ -95,6 +99,18 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         let object = objects[indexPath.row]
         
         cell.messageLabel.text = object["text"] as! String?
+        
+        print("1")
+        
+        let user = object["user"] as? PFUser
+        
+        print("@")
+        
+        if let username = user?.username {
+            cell.userLabel.text = username
+        }
+        
+        print("#")
         
         return cell
         

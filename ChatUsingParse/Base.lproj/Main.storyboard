@@ -120,20 +120,33 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ob2-iD-uzX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBU-6g-6GR">
+                                                    <rect key="frame" x="8" y="8" width="359" height="49"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ob2-iD-uzX">
+                                                    <rect key="frame" x="8" y="61" width="359" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="ob2-iD-uzX" firstAttribute="leading" secondItem="MU9-EX-Iv2" secondAttribute="leading" id="Kx4-gf-KYc"/>
-                                                <constraint firstItem="ob2-iD-uzX" firstAttribute="top" secondItem="MU9-EX-Iv2" secondAttribute="top" id="vJZ-wb-UHO"/>
+                                                <constraint firstItem="ob2-iD-uzX" firstAttribute="leading" secondItem="vBU-6g-6GR" secondAttribute="leading" id="3fW-cH-6PO"/>
+                                                <constraint firstAttribute="trailing" secondItem="ob2-iD-uzX" secondAttribute="trailing" constant="8" id="5ok-Gx-ie2"/>
+                                                <constraint firstItem="ob2-iD-uzX" firstAttribute="top" secondItem="vBU-6g-6GR" secondAttribute="bottom" constant="4" id="7IL-2s-Ubg"/>
+                                                <constraint firstAttribute="trailing" secondItem="vBU-6g-6GR" secondAttribute="trailing" constant="8" id="El2-XX-G05"/>
+                                                <constraint firstItem="ob2-iD-uzX" firstAttribute="leading" secondItem="MU9-EX-Iv2" secondAttribute="leading" constant="8" id="Kx4-gf-KYc"/>
+                                                <constraint firstAttribute="bottom" secondItem="ob2-iD-uzX" secondAttribute="bottom" constant="8" id="TOc-kC-kQF"/>
+                                                <constraint firstItem="vBU-6g-6GR" firstAttribute="top" secondItem="MU9-EX-Iv2" secondAttribute="top" constant="8" id="qVb-XB-Xzo"/>
+                                                <constraint firstItem="vBU-6g-6GR" firstAttribute="leading" secondItem="MU9-EX-Iv2" secondAttribute="leading" constant="8" id="sDu-Dr-qNL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="messageLabel" destination="ob2-iD-uzX" id="ij1-gk-Etc"/>
+                                            <outlet property="userLabel" destination="vBU-6g-6GR" id="Lia-ZW-oDx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
