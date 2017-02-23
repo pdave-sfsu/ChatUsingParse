@@ -14,6 +14,7 @@
 		A55EABD71E5D753000E14F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A55EABD51E5D753000E14F97 /* LaunchScreen.storyboard */; };
 		A55EABDF1E5D77CD00E14F97 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55EABDE1E5D77CD00E14F97 /* LoginViewController.swift */; };
 		A55EABE71E5E8EFD00E14F97 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55EABE61E5E8EFD00E14F97 /* ChatViewController.swift */; };
+		A55EABE91E5EA9AC00E14F97 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55EABE81E5EA9AC00E14F97 /* MessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A55EABD81E5D753000E14F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A55EABDE1E5D77CD00E14F97 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A55EABE61E5E8EFD00E14F97 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		A55EABE81E5EA9AC00E14F97 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		A55EABCB1E5D753000E14F97 /* ChatUsingParse */ = {
 			isa = PBXGroup;
 			children = (
+				A55EABEA1E5EA9B300E14F97 /* Cell */,
 				A55EABE41E5E696400E14F97 /* View Controllers */,
 				A55EABCC1E5D753000E14F97 /* AppDelegate.swift */,
 				A55EABD01E5D753000E14F97 /* Main.storyboard */,
@@ -88,6 +91,14 @@
 				A55EABE61E5E8EFD00E14F97 /* ChatViewController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A55EABEA1E5EA9B300E14F97 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A55EABE81E5EA9AC00E14F97 /* MessageCell.swift */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		ECE0F52B4C5760566DEA0B0A /* Pods */ = {
@@ -223,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A55EABDF1E5D77CD00E14F97 /* LoginViewController.swift in Sources */,
+				A55EABE91E5EA9AC00E14F97 /* MessageCell.swift in Sources */,
 				A55EABE71E5E8EFD00E14F97 /* ChatViewController.swift in Sources */,
 				A55EABCD1E5D753000E14F97 /* AppDelegate.swift in Sources */,
 			);
