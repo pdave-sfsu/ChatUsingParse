@@ -61,6 +61,9 @@ class LoginViewController: UIViewController {
             
             if success {
                 print("User signed up!")
+                
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+
             } else {
                 print("User did not sign up")
                 
@@ -84,6 +87,8 @@ class LoginViewController: UIViewController {
         PFUser.logInWithUsername(inBackground: emailTextField.text!, password: passwordTextField.text!) { (user: PFUser?, error: Error?) in
             if user != nil {
                 print("User logged in")
+                
+                self.performSegue(withIdentifier: "loginSegue", sender: nil)
             } else {
                 print("User did not log in")
                 
